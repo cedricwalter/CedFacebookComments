@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.4" type="plugin" group="content" method="upgrade">
+    <name>PLG_CONTENT_CEDFACEBOOKCOMMENTS</name>
+    <creationDate>2016-12-31</creationDate>
+
+    <version>1.4.2</version>
+
+    <author>Galaxiis</author>
+    <authorEmail>galaxiiscom@gmail.com</authorEmail>
+    <authorUrl>www.galaxiis.com</authorUrl>
+
+    <copyright>Copyright (C) 2013-2016 galaxiis.com All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL 3.0</license>
+
+    <description>PLG_CONTENT_CEDFACEBOOKCOMMENTS_XML_DESCRIPTION</description>
+
+    <files>
+        <filename plugin="cedfacebookcomments">cedfacebookcomments.php</filename>
+        <filename plugin="cedfacebookcomments">index.html</filename>
+        <folder>language</folder>
+    </files>
+
+    <config addfieldpath="libraries/galaxiis/fields">
+        <fields name="params">
+            <fieldset name="basic">
+                <field shortId="cedfacebookcomments"
+                       name="toolbar"
+                       type="galaxiisbar"/>
+                <field
+                        name="message"
+                        type="galaxiismessage"
+                        message="note"
+                        label="Please help us: vote, suggest and give us your opinion in the Joomla extensions directory. With this you will help us to increase our interest to modify and update the extension. Thank you very much."/>
+                <field
+                        name="version_msg"
+                        type="galaxiismessage"
+                        message="version"
+                        version="1.4.2"
+                        extension_name="CedFacebookComments"/>
+
+
+            </fieldset>
+            <fieldset name="Settings" label="Settings">
+
+                <field name="width" type="integer"
+                       require="true"
+                       default="550" label="PLG_CONTENT_CEDFACEBOOKCOMMENTS_WIDTH"
+                       description="PLG_CONTENT_CEDFACEBOOKCOMMENTS_WIDTH_DESC"
+                       first="1"
+                       last="1000"
+                       step="1"/>
+
+                <field name="spacer_counter" type="spacer"
+                       label="&lt;div style=&quot;font-weight:bold;font-size:11px;color:#000;padding:8px;margin:0;background:#ffd;&quot;&gt;Get 'Counter' comments display &lt;a target=&quot;_blank&quot; href=&quot;http://www.galaxiis.com/cedfacebookcomments-subscribe/&quot;&gt;get the Premium Version of CedFacebookComments now.&lt;/a&gt;&lt;/div&gt;"
+                       default="" description=""/>
+
+
+                <field name="showIcon" type="radio" default="cgpc-icon" label="Show Comment Icon"
+                       description="Enable comment icon if count is shown. Default is Yes."
+                       class="btn-group">
+                    <option value="cgpc-icon">Yes</option>
+                    <option value="cgpc-none">No</option>
+                </field>
+
+                <field name="icon" type="awesome" default="fa-comment" label="Comment icon type"
+                       description="Enable comment icon if count is shown. Default is fa-comment"
+                       class="btn-group"
+                       showon="showIcon:cgpc-icon">
+                    <option value="fa-comment">icon</option>
+                    <option value="fa-comment-o">icon</option>
+                    <option value="fa-comments">icon</option>
+                    <option value="fa-comments-o">icon</option>
+                    <option value="fa-google-plus">icon</option>
+                    <option value="fa-google-plus-square">icon</option>
+                    <option value="fa-pencil-square-o">icon</option>
+                </field>
+
+
+                <field name="spacer_appid" type="spacer"
+                       label="&lt;div style=&quot;font-weight:bold;font-size:11px;color:#000;padding:8px;margin:0;background:#ffd;&quot;&gt;'Get Facebook App ID' &lt;a target=&quot;_blank&quot; href=&quot;https://developers.facebook.com/apps&quot;&gt;Here&lt;/a&gt;
+                       &lt;/div&gt;"
+                       default="" description=""/>
+
+                <field name="appId" type="text" size="30" default=""
+                       required="true"
+                       label="PLG_CONTENT_CEDFACEBOOKCOMMENTS_APPID"
+                       description="PLG_CONTENT_CEDFACEBOOKCOMMENTS_APPID_DESC"/>
+                <field name="numposts" type="integer" size="30" default="10"
+                       required="true"
+                       label="PLG_CONTENT_CEDFACEBOOKCOMMENTS_POSCOUNT"
+                       description="PLG_CONTENT_CEDFACEBOOKCOMMENTS_POSCOUNT_DESC"
+                       first="1"
+                       last="100"
+                       step="1"/>
+
+                <field name="moderatorId" type="text" size="30" default=""
+                       label="PLG_CONTENT_CEDFACEBOOKCOMMENTS_MODERATOR_ID"
+                       description="PLG_CONTENT_CEDFACEBOOKCOMMENTS_MODERATOR_ID_DESC"/>
+
+                <field name="spacer_color" type="spacer"
+                       label="&lt;div style=&quot;font-weight:bold;font-size:11px;color:#000;padding:8px;margin:0;background:#ffd;&quot;&gt;Get 'Dark' Color Theme &lt;a target=&quot;_blank&quot; href=&quot;http://www.galaxiis.com/cedfacebookcomments-subscribe/&quot;&gt;get the Premium Version of CedFacebookComments now.&lt;/a&gt;&lt;/div&gt;"
+                       default="" description=""/>
+
+                <field name="color" type="radio" default="light" label="PLG_CONTENT_CEDFACEBOOKCOMMENTS_COLOR"
+                       description="PLG_CONTENT_CEDFACEBOOKCOMMENTS_COLOR_DESC"
+                       class="btn-group">
+                    <option value="light">PLG_CONTENT_CEDFACEBOOKCOMMENTS_COLOR1</option>
+                </field>
+
+                <field name="spacer_order" type="spacer"
+                       label="&lt;div style=&quot;font-weight:bold;font-size:11px;color:#000;padding:8px;margin:0;background:#ffd;&quot;&gt;Get 'Social Relevance' and 'Reverse Time' ordering &lt;a target=&quot;_blank&quot; href=&quot;http://www.galaxiis.com/cedfacebookcomments-subscribe/&quot;&gt;get the Premium Version of CedFacebookComments now.&lt;/a&gt;&lt;/div&gt;"
+                       default="" description=""/>
+
+                <field name="order" type="radio" default="time" label="PLG_CONTENT_CEDFACEBOOKCOMMENTS_ORDER"
+                       description="PLG_CONTENT_CEDFACEBOOKCOMMENTS_ORDER_DESC"
+                       class="btn-group">
+                    <option value="time">PLG_CONTENT_CEDFACEBOOKCOMMENTS_ORDER3</option>
+                </field>
+
+                <field name="spacer_categories" type="spacer"
+                       label="&lt;div style=&quot;font-weight:bold;font-size:11px;color:#000;padding:8px;margin:0;background:#ffd;&quot;&gt;'Get 'Category selection' &lt;a target=&quot;_blank&quot; href=&quot;http://www.galaxiis.com/cedfacebookcomments-subscribe/&quot;&gt;get the Premium Version of CedFacebookComments now.&lt;/a&gt;&lt;/div&gt;"
+                       default="" description=""/>
+
+
+            </fieldset>
+        </fields>
+    </config>
+</extension>
+
